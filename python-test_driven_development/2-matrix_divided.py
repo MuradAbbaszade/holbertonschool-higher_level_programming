@@ -4,10 +4,11 @@
 
 def matrix_divided(matrix, div):
     """Matrix divided function"""
+    msg = "matrix must be a matrix (list of lists) of integers/floats"
     for i in matrix:
         for j in i:
             if not (isinstance(j, int) or isinstance(j, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(msg)
     k = len(matrix[0])
     for i in matrix:
         if len(i) != k:
