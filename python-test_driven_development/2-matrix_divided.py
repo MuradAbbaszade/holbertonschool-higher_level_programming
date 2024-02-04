@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Matrix divided"""
+
+
 def matrix_divided(matrix, div):
+    """Matrix divided function"""
     for i in matrix:
         for j in i:
             if not (isinstance(j, int) or isinstance(j, float)):
@@ -19,4 +23,3 @@ def matrix_divided(matrix, div):
             new_row.append(round(j / div, 2))
         new_matrix.append(new_row)
     return new_matrix
-        
