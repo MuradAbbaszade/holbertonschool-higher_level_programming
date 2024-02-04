@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Text indentation"""
+
+
 def text_indentation(text):
+    """Text indentation function"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     space = False
