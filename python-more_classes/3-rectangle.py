@@ -13,7 +13,7 @@ class Rectangle:
     def __str__(self):
         """To string"""
         result = ""
-        if self.widht == 0 or self.height == 0:
+        if self.width == 0 or self.height == 0:
             return result
         for i in range(self.height):
             for _ in range(self.width):
