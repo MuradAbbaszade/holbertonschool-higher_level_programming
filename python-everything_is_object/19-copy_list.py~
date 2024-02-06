@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""COPY LIST"""
+
+
+def copy_list(a_list):
+    """copy list function"""
+    new_list = []
+    for i in a_list:
+        new_list.append(i)
+    return new_list
