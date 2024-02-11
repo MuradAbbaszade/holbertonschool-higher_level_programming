@@ -10,4 +10,5 @@ arg_list = []
 for i in sys.argv:
     arg_list.append(i)
 del arg_list[0]
-save_to_json_file(arg_list, "add_item.json")
+if arg_list:
+    save_to_json_file(arg_list, "add_item.json")
