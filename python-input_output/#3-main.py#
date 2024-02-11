@@ -1,0 +1,12 @@
+guillaume@ubuntu:~/$ cat 3-main.py
+#!/usr/bin/python3
+to_json_string = __import__('3-to_json_string').to_json_string
+
+my_list = [1, 2, 3]
+s_my_list = to_json_string(my_list)
+print(s_my_list)
+print(type(s_my_list))
+
+my_dict = {
+:
+}".format(e.__class__.__name__, e))
