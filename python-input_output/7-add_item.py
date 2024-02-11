@@ -11,7 +11,10 @@ for i in sys.argv:
     arg_list.append(i)
 del arg_list[0]
 if arg_list:
-    obj = load_from_json_file("add_item.json")
-    for i in arg_list:
-        obj.append(i)
-    save_to_json_file(obj, "add_item.json")
+    try:
+        obj = load_from_json_file("add_item.json")        
+        for i in arg_list:
+            obj.append(i)
+        save_to_json_file(obj, "add_item.json")
+    except FileNotFoundError:
+        save_to_json_file(arg_list, "add_item.json")
