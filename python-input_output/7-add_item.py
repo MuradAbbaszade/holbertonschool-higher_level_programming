@@ -12,7 +12,7 @@ for i in sys.argv:
 del arg_list[0]
 if arg_list:
     try:
-        obj = load_from_json_file("add_item.json")        
+        obj = load_from_json_file("add_item.json")
         for i in arg_list:
             obj.append(i)
         save_to_json_file(obj, "add_item.json")
