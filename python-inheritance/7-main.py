@@ -5,4 +5,4 @@ bg = BaseGeometry()
 
 
 
-bg.integer_validator("a")
+bg.integer_validator("age", True)
