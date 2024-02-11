@@ -10,7 +10,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs = None):
+    def to_json(self, attrs=None):
         """To json function"""
         result_dict = {}
         if not (attrs is None):
