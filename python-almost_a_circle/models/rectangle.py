@@ -76,6 +76,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
+        """Update function"""
         attributes = ["id", "width", "height", "x", "y"]
         i = 0
         for arg in args:
