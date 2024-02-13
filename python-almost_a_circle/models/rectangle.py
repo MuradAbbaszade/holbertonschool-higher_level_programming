@@ -63,14 +63,21 @@ class Rectangle(Base):
 
     def area(self):
         """Area function"""
-        return self.__height * self.__width
+        return self.height * self.width
 
     def display(self):
         """Display function"""
-        for _ in range(self.__height):
-            for _ in range(self.__width):
+        for _ in range(self.height):
+            for _ in range(self.width):
                 print("#", end="")
             print()
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        attributes = ["id", "width", "height", "x", "y"]
+        i = 0
+        for arg in args:
+            setattr(self, attributes[i], arg)
+            i += 1
