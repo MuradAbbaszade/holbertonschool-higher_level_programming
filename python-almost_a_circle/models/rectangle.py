@@ -14,16 +14,16 @@ class Rectangle(Base):
         super().__init__(id)
     @property
     def width(self):
-        self.__width
+        return self.__width
     @property
     def height(self):
-        self.__height
+        return self.__height
     @property
     def x(self):
-        self.__x
+        return self.__x
     @property
     def y(self):
-        self.__Y
+        return self.__Y
     @width.setter
     def width(self, width):
         self.__width = width
