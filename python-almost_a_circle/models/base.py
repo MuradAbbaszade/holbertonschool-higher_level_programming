@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base module"""
 import json
+import os
 
 
 class Base:
@@ -28,7 +29,7 @@ class Base:
         if list_objs is None:
             filename = "{}.json".format(type(list_objs.__class__.__name__))
             with open(filename, "w") as file:
-                file.write([])
+                file.write("[]")
         else:
             list_dict = []
             for i in list_objs:
@@ -58,12 +59,12 @@ class Base:
     def load_from_file(cls):
         """Load from file"""
         filename = "{}.json".format(cls.__name__)
-        try:
+        if os.path.exists(filename):
             with open(filename, "r") as file:
                 dicts = cls.from_json_string(file.read())
                 list_of_instances = []
                 for i in dicts:
                     list_of_instances.append(cls.create(**i))
-                return list_of_instances
-        except FileNotFoundError:
+            return list_of_instances
+        else:
             return []
