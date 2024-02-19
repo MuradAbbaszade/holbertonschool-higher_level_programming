@@ -51,7 +51,7 @@ class Base:
             d = cls(1, 1)
         else:
             d = cls(1)
-        d.update(dictionary)
+        d.update(**dictionary)
         return d
 
     @classmethod
