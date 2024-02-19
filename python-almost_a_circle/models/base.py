@@ -33,7 +33,7 @@ class Base:
         else:
             list_dict = []
             for i in list_objs:
-                list_dict.append(i.__dict__)
+                list_dict.append(i.to_dictionary())
             with open(filename, "w") as file:
                 file.write(Base.to_json_string(list_dict))
 
