@@ -1,1 +1,1 @@
-# Javascript: Dom Manipulation
+#Dom Manipulation
